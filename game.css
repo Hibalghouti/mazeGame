@@ -1,0 +1,182 @@
+/* Basic styles for headings */
+h1, h2 {
+    text-align: center;
+}
+
+p {
+    width: 600px;
+    margin: 1em auto;
+}
+
+/* Game container styling */
+#game {
+    margin: auto;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    background-color: #f0f0f0; /* Slight background color for contrast */
+    border: 2px solid #ccc; /* A border to enclose the game area */
+}
+
+/* Start and End button styling */
+#start, #end {
+    position: absolute;
+    top: 205px;
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 25pt;
+    text-align: center;
+}
+
+/* Start button - positioned on the left */
+#game #start {
+    background-color: #88ff88;
+    left: 0;
+}
+
+/* End button - positioned on the right */
+#game #end {
+    background-color: #8888ff;
+    right: 0;
+}
+
+/* Boundary styling */
+div.boundary {
+    position: absolute;
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
+
+div.boundary.example {
+    margin: auto;
+    width: 100px;
+    height: 25px;
+}
+
+div.youlose {
+    background-color: #ff8888;
+}
+
+/* Maze boundary positions (correcting positioning for better layout) */
+#game div.boundary:nth-child(2) {
+    left: 0;
+    height: 200px;
+    width: 150px;
+}
+
+#game div.boundary:nth-child(3) {
+    left: 151px;
+    height: 50px;
+    width: 198px;
+}
+
+#game div.boundary:nth-child(4) {
+    left: 348px;
+    height: 200px;
+    width: 150px;
+}
+
+#game div.boundary:nth-child(5) {
+    top: 250px;
+    left: 0;
+    height: 48px;
+    width: 498px;
+}
+
+#game div.boundary:nth-child(6) {
+    top: 100px;
+    left: 200px;
+    height: 150px;
+    width: 98px;
+}
+
+/* Styling for reset button */
+#reset {
+    background-color: #f4a261;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Controls container for reset button */
+#controls {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100px; /* Adjust height as needed */
+    margin-top: 20px;
+}
+
+/* Boundary colors for different game states */
+.boundary-default {
+    background-color: #eeeeee;
+}
+
+.boundary-gameover {
+    background-color: rgb(243, 159, 159);
+}
+
+.boundary-success {
+    background-color: rgb(113, 225, 141);
+}
+
+/* Hover effect for the reset button */
+#reset:hover {
+    background-color: #e76f51;
+}
+
+/* CSS for Collectibles (like coins) */
+.collectible {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: gold; /* Style it as a coin */
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+#coin1 {
+    left: 100px;
+    top: 100px;
+}
+
+#coin2 {
+    left: 300px;
+    top: 150px;
+}
+
+/* Timer styling (positioned at the top of the screen) */
+/* Style for the countdown timer */
+#timer {
+    position: absolute;
+    top: 60px; /* Adjust the distance from the top of the reset button */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    z-index: 2; /* Ensure the timer stays above other elements */
+}
+
+/* Game container adjustment */
+#game {
+    position: relative;
+    height: 300px;
+    width: 500px;
+}
+
+/* Boundary styling */
+.boundary {
+    background-color: #eeeeee;
+    border: 1px solid black;
+}
